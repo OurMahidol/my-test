@@ -1,24 +1,16 @@
 # my-test
 
-## Project setup
+### การเริ่มต้นติดตั้งระบบหน้าบ้าน(Frontend)
+คุณสามารถเริ่มต้นติดตั้งระบบหน้าบ้านด้วยคำสั่งด้านล่างนี้
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### เริ่มต้นการทำงานของระบบหน้าบ้าน(Frontend)
+คุณสามารถเริ่มต้นการทำงานของระบบหน้าบ้านด้วยคำสั่งด้านล่างนี้
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+ดูเพิ่มเติมได้ที่ [Configuration Reference](https://cli.vuejs.org/config/).
