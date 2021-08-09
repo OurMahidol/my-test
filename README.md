@@ -26,7 +26,7 @@ npm run serve
 ### Customize frontend configuration
 ดูเพิ่มเติมได้ที่ [Configuration Reference](https://cli.vuejs.org/config/).
 
-### การเริ่มต้นและตั้งค่าระบบหลังบ้าน(ฺBackend)
+### การเริ่มต้นและตั้งค่าระบบหลังบ้าน(Backend)
 เรามีไฟล์ PHP Server ให้คุณใน ./backend/action.php
 โดยเราได้กำหนดค่า default เริ่มต้นให้ดังนี้ 
 ```
@@ -36,5 +36,24 @@ $password = "" ;                    //Your  password
 $dbname = "my_test" ;               //Database name
 $tablename = "users_data" ;         //Table name
 ```
-### ฐานข้อมูล MySQL(ฺMySQL database)
+### ฐานข้อมูล MySQL(MySQL database)
 เรามีไฟล์ SQL database ให้คุณใน ./backend/my_test.sql
+
+### การตั้งค่าการเชื่อมต่อระบบหน้าบ้านและหลังบ้าน
+เราให้ระบบหน้าบ้านเรียกใช้ระบบหลังบ้านผ่าน path ชื่อ ./backend/action.php
+โดยคุณสามารถตั้งค่าเพิ่มเติมได้ใน ./vue.config.js
+```
+module.exports = {
+  transpileDependencies: [
+    'vuetify'
+  ],
+  devServer: {
+    proxy: {
+      '^/backend/': {
+        target: 'http://localhost', //Your  server
+        changeOrigin: true
+      }
+    }
+  }
+}
+```
